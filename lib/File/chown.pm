@@ -62,7 +62,7 @@ that groks user-/group names, as well as some other extra features.
 
 =head1 FUNCTIONS
 
-=head1 chown([ \%opts, ] LIST) => bool
+=head2 chown([ \%opts, ] LIST) => bool
 
 Changes the owner (and group) of a list of files. Like the core version of
 C<chown()>, The first two elements of the list must be C<$user> and C<$group>
