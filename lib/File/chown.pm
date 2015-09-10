@@ -53,6 +53,20 @@ sub chown {
 
  use File::chown; # exports chown() by default
 
+ # chown by user-/group names
+ chown "ujang", "ujang", @files;
+
+ # numeric ID's still work
+ chown -1, 500, "myfile.txt";
+
+ # option: use a reference file's owner/group instead of specifying directly,
+ # like the Unix chown command's --reference=FILE.
+ chown({ref => "/etc/passwd"}, "mypasswd");
+
+ # option: use lchown instead of chown, like Unix chown command's --no-derefence
+ # (-h).
+ chown({deref=>0}, "nobody", "nobody", "/home/user/www");
+
 
 =head1 DESCRIPTION
 
