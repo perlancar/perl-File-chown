@@ -2,3 +2,4 @@ File-chown-*
 .build
 *~
 nytprof*
+.DS_Store
